@@ -2,7 +2,7 @@ let SONG = new Audio()
 let index = 0
 let folder=""
 async function getSongs(folder){ 
-    let a=await fetch(`http://127.0.0.1:3000/BeatWave/${folder}/`)
+    let a=await fetch(`/BeatWave/${folder}/`)
     let response = await a.text()
     let div=document.createElement("div")
     div.innerHTML=response
@@ -76,7 +76,7 @@ async function main(folder) {
 
         e.addEventListener("click",element=>{
             let d = `${e.querySelector(".song_name").innerHTML}-${e.querySelector(".artist").innerHTML}`
-            let c=`http://127.0.0.1:3000/BeatWave/${folder}/${e.querySelector(".song_name").innerHTML}-${e.querySelector(".artist").innerHTML}.mp3`
+            let c=`/BeatWave/${folder}/${e.querySelector(".song_name").innerHTML}-${e.querySelector(".artist").innerHTML}.mp3`
             playMusic(c,d)
         })
     })
