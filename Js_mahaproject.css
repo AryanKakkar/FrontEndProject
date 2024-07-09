@@ -1,0 +1,798 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.body{
+    display: flex;
+    padding: 8px;
+}
+
+.side{
+    width: 350px;
+    height: calc(100vh - 16px);
+    background-color: black;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.main{
+    width: calc(100vw - 378px);
+    height: calc(100vh - 21px);
+    background-color: black;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-right: 8px;
+}
+
+.sdiv1{
+    height: 170px;
+    width: 340px;
+    background-color: #121212;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.sdiv2{
+    height: calc(100vh - 200px);
+    width: 340px;
+    background-color:#121212;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.sdiv1-img1{
+    display: flex;
+    width: 320px;
+    height: 40%;
+    margin: 0px 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sdiv1-img1 svg{
+   opacity: 0;
+}
+
+.sdiv1-img2{
+    display: flex;
+    width: 320px;
+    height: 20%;
+    margin: 0px 10px;
+    align-items: center;
+
+}
+
+.sdiv1-img2 span{
+    padding: 0px 10px;
+}
+
+.sdiv1-img1 video{
+    position: relative;
+    right: 5px;
+    bottom: 5px;
+}
+
+.lib{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+}
+
+.set{
+    display: flex;
+    align-items: center;
+}
+
+.set span{
+    padding: 0px 10px;
+}
+
+.scroll{
+    height: 180px;
+    overflow-y: auto;
+    width: 340px;
+    margin: 5px 0px;
+}
+
+.scroll1{
+    height: 180px;
+    background-color: #121212;
+    overflow-y: auto;
+    width: 340px;
+    margin: 5px 0px;
+}
+
+.scroll1 ul{
+    padding: 0px 35px;
+    cursor: pointer;
+}
+
+.scroll1 ul li{
+    list-style-type: decimal;
+    font-size: 12px;
+}
+
+.scroll1::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll1::-webkit-scrollbar-track {
+    background: #121212; /* Background color of the scrollbar track */
+}
+
+.scroll1::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar handle */
+    border-radius: 6px;
+}
+
+
+.scdiv1{
+    height: 130px;
+    width: 280px;
+    margin: 8px auto;
+    margin-bottom: 25px;
+    background-color: #242424;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px 15px;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: #121212; /* Background color of the scrollbar track */
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar handle */
+    border-radius: 6px;
+}
+
+.p1{
+    font-size: 15px;
+    padding: 5px 0px;
+    font-weight: 500;
+}
+
+.p2{
+    font-size: 12px;
+    padding: 5px 0px;
+}
+
+.textb button{
+    width: 130px;
+    padding: 5px 0px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.nav{
+    width: calc(100vw - 378px);
+    height: 70px;
+    background-color: #121212;
+    border-radius: 5px 5px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrow{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.arrow svg{
+   opacity: 0;
+   width: 30px;
+   height: 30px;
+}
+
+.arrow button{
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    color: white;
+    background-color: black;
+    font-weight: 100;
+    border-width: 0px;
+}
+
+.btn-sm{
+    display: flex;
+    align-items: center;
+}
+
+.btn-sm :nth-child(1){
+    background-color: #121212;
+    color: rgb(158, 158, 158);
+    width: 100px;
+    padding: 10px 15px;   
+    border-radius: 50px;
+    font-weight: 600;
+    border-width: 0px;
+    font-size: 10px;
+}
+.btn-sm :nth-child(2){
+    padding: 10px 15px;
+    width: 100px;
+    border-radius: 50px;
+    font-weight: 600;
+    background-color: white;
+    font-size: 10px;
+}
+
+.btn-sm :nth-child(3){
+    opacity: 0;
+    width: 30px
+}
+
+.content{
+    height: calc(100vh - 160px);
+    width: calc(100vw - 378px);
+    background-color: #121212;
+    overflow-y: scroll;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: #121212; /* Background color of the scrollbar track */
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar handle */
+    border-radius: 6px;
+}
+
+.play{
+    padding: 16px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.cards{
+    height: calc(100vh - 160px);
+    width: calc(100vw - 400px);
+    background-color: #121212;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    height: 250px;
+    width: 190px;
+    margin: 5px 5px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.card img{
+    height: 160px;
+    width: 170px;
+    margin: 0px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.card h3{
+    font-size: 14px;
+    font-weight: 400;
+    padding: 2px 8px;
+}
+
+.card p{
+    font-size: 12px;
+    font-weight: 400;
+    padding: 2px 8px;
+    color: gray;
+}
+
+.sVg{
+    height: 50px;
+    width: 50px;
+    border-radius: 40px;
+    background-color: rgb(55, 226, 55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 120px;
+    left: 125px;
+    opacity: 0;
+}
+
+.card:hover .sVg{
+    box-shadow:0px 5px 30px 5px black;
+    top: 110px;
+    left: 125px;
+    opacity: 1;
+    transition: all 0.3s ease-out;
+}
+
+.card:hover{
+    background-color: #242424;
+    transition: all 0.3s ease-out;
+}
+
+.sVg svg{
+    height: 25px;
+    width: 25px;
+}
+
+.playbar{
+    height: 65px;
+    width: 95%;
+    margin: 5px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    position: relative;
+}
+
+.song-info{
+    width: 20%;
+    height: 75%;
+    padding: 5px 5px;
+    font-size: 14px;
+}
+
+.deck{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+}
+
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deck svg{
+    cursor: pointer;
+}
+
+.deck button{
+    cursor: pointer;
+}
+
+.Song-duration{
+    width: 20%;
+    height: 75%;
+    padding: 7px 5px;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 400;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.song-duration{
+    margin-right: 1.1vw;
+}
+
+.vol{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 5px;
+}
+
+.vol svg{
+    height: 20px;
+    width: 20px;
+}
+
+#volume {
+    -webkit-appearance: none; /* Removes default styling */
+    width: 100%; /* Full width */
+    height: 8px; /* Track height */
+    background: linear-gradient(to right, rgb(55, 226, 55) 50%, #fff 50%); /* Initial gradient */
+    border-radius: 5px; /* Track rounded corners */
+    outline: none; /* Remove default outline */
+}
+
+/* Track styles */
+#volume::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px; /* Track height */
+    cursor: pointer;
+    background: transparent; /* Background is set via inline style */
+}
+
+#volume::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: transparent; /* Background is set via inline style */
+}
+
+#volume::-ms-track {
+    width: 100%;
+    height: 8px;
+    background: transparent;
+    border-color: transparent;
+    border-width: 6px 0;
+    color: transparent;
+    cursor: pointer;
+}
+
+/* Thumb (ball) styles */
+#volume::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Removes default styling */
+    width: 10px; /* Reduced thumb width */
+    height: 10px; /* Reduced thumb height */
+    background: #fff; /* Thumb color */
+    border-radius: 50%; /* Rounded thumb */
+    cursor: pointer;
+    margin-top: -1px; /* Adjust thumb position if needed */
+}
+
+#volume::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#volume::-ms-thumb {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#volume{
+    height: 3px;
+    width: 60%;
+}
+
+.pause{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    border-width: 0px;
+    margin: 0px 20px;
+}
+
+.controls> svg{
+    fill: gray
+}
+
+.controls> svg:hover{
+    fill: white;
+    transition: all 0.2s ease-out;
+}
+
+.scroll1{
+    height: 180px;
+    background-color: #121212;
+    overflow-y: auto;
+    width: 340px;
+    margin: 5px 0px;
+}
+
+.scroll1 ul{
+    padding: 0px 15px;
+}
+
+.scroll1 ul li{
+    list-style-type: decimal;
+    font-size: 12px;
+}
+
+.scroll1::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll1::-webkit-scrollbar-track {
+    background: #121212; /* Background color of the scrollbar track */
+}
+
+.scroll1::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar handle */
+    border-radius: 6px;
+}
+
+.imageS{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+}
+
+.image img{
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.song_desc{
+    width: 200px;
+    text-align: left;
+}
+
+.song_name{
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.artist{
+    color: rgb(185, 185, 185);
+    margin-left: 5px;
+}
+
+.scroll1 li{
+    height: 50px;
+    width: 280px;
+    background-color: #121212;
+    margin: 5px 0px;
+    border-radius: 5px;
+}
+
+.PLAY{
+    padding-top: 6px;
+    opacity: 0;
+}
+
+.scroll1 li:hover .PLAY{
+    opacity: 1;
+}
+
+.scroll1 li:hover{
+    background-color: #242424;
+}
+
+.scroll1 ul li {
+    list-style-type: none;
+    font-size: 12px;
+    position: relative;
+}
+
+.seekbar{
+    height: 4px;
+    width: 100%;
+    background: white;
+    position: relative;
+    border-radius: 5px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.circle{
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+    bottom: 3px;
+    left: 0%;
+    transition: left 0.5s;
+}
+
+
+@media screen and (max-width:800px){
+    .side{
+        position: absolute;
+        left: -120%;
+        z-index: 1;
+        transition: all 0.3s ;
+    }
+
+
+    .main{
+        width: 97vw;
+    }
+    .content{
+        width: 97vw;
+    }
+    .cards{
+        width: 95vw;
+    }
+    .nav{
+        width: 97vw;
+    }
+
+    .arrow svg{
+        opacity: 1;
+        background-color: black;
+        padding: 1px;
+        width: 15px;
+        height: 15px;
+     }
+
+     .sdiv1-img1 svg{
+        opacity: 1;
+     }
+
+     .arrow button{
+        font-size: 15px;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width:635px){
+    .side{
+        position: absolute;
+        width: 250px;
+        left: -120%;
+        z-index: 1;
+        transition: all 0.3s ;
+    }
+    .body{
+        padding: 0px;
+    }
+    .main{
+        width: 100vw;
+        margin: 0px;
+    }
+    .sdiv1{
+        width: 250px;
+    }
+
+    .sdiv1-img1{
+        width: 240px;
+    }
+
+    .scroll1{
+        width: 250px;
+    }
+
+    .sdiv2{
+        width: 250px;
+    }
+    .scroll1 li{
+        width: 230px;
+    }
+    .main{
+        width: 97vw;
+    }
+    .content{
+        width: 100vw;
+        margin: 0px;
+    }
+    .cards{
+        width: 90vw;
+    }
+    .nav{
+        width: 100vw;
+    }
+
+    .arrow svg{
+        opacity: 1;
+        background-color: black;
+        padding: 1px;
+        width: 15px;
+        height: 15px;
+     }
+
+     .sdiv1-img1 svg{
+        opacity: 1;
+     }
+
+     .arrow button{
+        font-size: 15px;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width:444px){
+    .side{
+        position: absolute;
+        width: 250px;
+        left: -120%;
+        z-index: 1;
+        transition: all 0.3s ;
+    }
+
+    .sdiv1{
+        width: 250px;
+    }
+
+    .sdiv1-img1{
+        width: 240px;
+    }
+
+    .scroll1{
+        width: 250px;
+    }
+
+    .sdiv2{
+        width: 250px;
+    }
+    .scroll1 li{
+        width: 230px;
+    }
+    .body{
+        padding: 0px;
+    }
+    .main{
+        width: 100vw;
+    }
+    .content{
+        width: 100vw;
+    }
+    .cards{
+        width: 90vw;
+        justify-content: center;
+    }
+    .nav{
+        width: 100vw;
+    }
+
+    .arrow svg{
+        opacity: 1;
+        background-color: black;
+        padding: 1px;
+        width: 15px;
+        height: 15px;
+     }
+
+     .sdiv1-img1 svg{
+        opacity: 1;
+     }
+
+     .arrow button{
+        font-size: 15px;
+        height: 20px;
+        width: 20px;
+    }
+    
+    .Song-duration{
+        width: 20%;
+        height: 75%;
+        padding: 7px 5px;
+        text-align: right;
+        font-size: 10px;
+        font-weight: 400;
+        color: gray;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+}
