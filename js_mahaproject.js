@@ -1,21 +1,21 @@
 let SONG = new Audio()
 let index = 0
 let folder=""
-async function getSongs(folder){ 
-    let a=await fetch(`/BeatWave/${folder}/`)
-    let response = await a.text()
-    let div=document.createElement("div")
-    div.innerHTML=response
-    let as=div.getElementsByTagName("a")
-    let songs=[]
-    for (let index = 0; index < as.length; index++) {
-        const element = as[index];
-        if(element.href.endsWith("mp3")){
-            songs.push(element.href)
-        }
-    }
-    return songs
-}
+// async function getSongs(folder){ 
+//     let a=await fetch(`/BeatWave/${folder}/`)
+//     let response = await a.text()
+//     let div=document.createElement("div")
+//     div.innerHTML=response
+//     let as=div.getElementsByTagName("a")
+//     let songs=[]
+//     for (let index = 0; index < as.length; index++) {
+//         const element = as[index];
+//         if(element.href.endsWith("mp3")){
+//             songs.push(element.href)
+//         }
+//     }
+//     return songs
+// }
 
 let songUL = document.querySelector(".scroll1").getElementsByTagName("ul")[0]
 
@@ -49,15 +49,15 @@ const playMusic=(track,info,pause=false)=>{
 }
 
 async function main(folder) {   
-    let songs = await getSongs(folder);
+    let songs = ['/BeatWave/Bandana-Shubh.mp3', '/BeatWave/Case-DiljitDosanjh.mp3', '/BeatWave/GOAT-DiljitDosanjh.mp3', '/BeatWave/GucciGabhru-HarkiratSangha.mp3', '/BeatWave//Lemonade-DiljitDosanjh.mp3', '/BeatWave/Mvp-Shubh.mp3', '/BeatWave/Naag-JazzyB.mp3']
     let j = Math.floor(Math.random()*7)
     console.log(folder)
     console.log(songs)
-    let s = `${songs[j]}`.split(`${folder}/`)[1].split(".")[0]
+    let s = `${songs[j]}`.split(`BeatWave/`)[1].split(".")[0]
     playMusic(songs[j],s,true)
 
     for(const song of songs) {
-        let b = song.replaceAll("%20"," ").split(`${folder}/`)[1].split(".")[0].split("-")
+        let b = song.replaceAll("%20"," ").split(`BeatWave/`)[1].split(".")[0].split("-")
         songUL.innerHTML = songUL.innerHTML + `<li><div class="image">
                                 <img src="Songs_cover.jpg" alt="">
                                 <div class="song_desc">
@@ -76,7 +76,7 @@ async function main(folder) {
 
         e.addEventListener("click",element=>{
             let d = `${e.querySelector(".song_name").innerHTML}-${e.querySelector(".artist").innerHTML}`
-            let c=`/BeatWave/${folder}/${e.querySelector(".song_name").innerHTML}-${e.querySelector(".artist").innerHTML}.mp3`
+            let c=`/BeatWave/${e.querySelector(".song_name").innerHTML}-${e.querySelector(".artist").innerHTML}.mp3`
             playMusic(c,d)
         })
     })
@@ -93,7 +93,7 @@ async function main(folder) {
         document.querySelector(".circle").style.left=`${(SONG.currentTime/SONG.duration)*100}%`
         if(SONG.currentTime==SONG.duration){
             let lk = Math.floor(Math.random()*7)
-            let sk = `${songs[lk]}`.split(`${folder}/`)[1].split(".")[0]
+            let sk = `${songs[lk]}`.split(`Beatwave/`)[1].split(".")[0]
             playMusic(songs[lk],sk)
         }
     })
@@ -107,7 +107,7 @@ async function main(folder) {
                 console.log(index)
             }
         }
-        let ik = `${songs[index]}`.split(`${folder}/`)[1].split(".")[0]
+        let ik = `${songs[index]}`.split(`BeatWave/`)[1].split(".")[0]
         playMusic(songs[index],ik)
     })
 
@@ -120,7 +120,7 @@ async function main(folder) {
                 console.log(index)
             }
         }
-        let ik = `${songs[index]}`.split(`${folder}/`)[1].split(".")[0]
+        let ik = `${songs[index]}`.split(`BeatWave/`)[1].split(".")[0]
         playMusic(songs[index],ik)
     })
 
